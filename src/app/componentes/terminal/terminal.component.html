@@ -1,0 +1,52 @@
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" *ngFor="let tab of archivos">
+        <a class="nav-link" (click)="seleccionTab(tab)" data-toggle="tab" href="#area" role="tab" aria-controls="area" aria-selected="true">
+            {{ tab.nombre }}
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)="nuevaTab()" data-toggle="tab" href="#area" role="tab" aria-controls="contact" aria-selected="false">+</a>
+    </li>
+</ul>
+
+<br>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade" id="area" role="tabpanel" aria-labelledby="area-tab">
+        <div>
+            <textarea class="rownr" rows="16" cols="1" value="1" readonly></textarea>
+            <span>
+                <textarea [(ngModel)]="contenido" class="txt" rows="15" cols="150" nowrap="nowrap" wrap="off"
+                autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                onclick="selectionchanged(this)" onkeyup="keyup(this,event)" oninput="input_changed(this)" onscroll="scroll_changed(this)"></textarea><br/><br/>
+                <label>Current position: </label><input id="sel_in" style="border-style:none" readonly>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+<!-- Terminal -->
+<div class="terminal">
+    <textarea class="consol" id="" cols="30" rows="10" disabled>
+>> Hola mundo!
+>> Nueva linea
+>> Hola mundo!
+>> Nueva linea
+>> Hola mundo!
+>> Nueva linea
+>> Hola mundo!
+>> Hola mundo!
+>> Nueva linea
+>> Hola mundo!
+>> Nueva linea
+>> Hola mundo!
+>> Hola mundo!
+>> Nueva linea
+>> Hola mundo!
+>> Nueva linea
+>> Hola mundo!
+    </textarea>
+</div>
+
