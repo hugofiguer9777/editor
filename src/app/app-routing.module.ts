@@ -5,6 +5,11 @@ import { TerminalComponent } from './componentes/terminal/terminal.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/terminal',
+    pathMatch: 'full'
+  },
+  {
     path: 'terminal',
     component: TerminalComponent
   }
